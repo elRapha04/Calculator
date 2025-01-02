@@ -16,6 +16,7 @@ body {
     height: 70vh;
     width: 60vw;
     padding: 20px;
+    padding-bottom: 40px;
     margin: auto;
 }
 
@@ -56,6 +57,12 @@ body {
     background-color: hsl(34, 100%, 62%);
 }
 
+#CLEAR:active {
+    grid-column: 1 / 4;
+    width: 100%;
+    background-color: hsl(34, 100%, 42%);
+}
+
 #ZERO {
     grid-column: 2;
 }
@@ -78,7 +85,7 @@ button:active {
     transform: scale(1.05);
     transition: 0.08s;
     /* filter: brightness(0.5); Darken to 80% brightness */
-    background-color: hsl(0, 0%, 30%);
+    background-color: hsl(0, 0%, 40%);
     color: white;
 }
 
