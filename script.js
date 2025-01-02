@@ -1,21 +1,15 @@
 const writeBtns = document.getElementsByClassName("write");
 const display = document.getElementById("display");
-const clear = document.getElementById("CLEAR");
-const solve = document.getElementById("SOLVE");
 
 for (let btn of writeBtns){
-    btn.addEventListener("click", clickWrite);
+    btn.addEventListener("click", function(){
+        const writeValue = this.textContent;
+        display.value += writeValue;
+    });
 };
 
-
-function clickWrite(){
-    const writeValue = this.textContent;
-    display.value += writeValue;
-};
-
-function keyWrite(){
-    
-};
+const clear = document.getElementById("CLEAR");
+const solve = document.getElementById("SOLVE");
 
 solve.onclick = function(){
     display.value = eval(display.value);
@@ -24,5 +18,3 @@ solve.onclick = function(){
 clear.onclick = function(){
     display.value = "";
 };
-
-window.addEventListener("keydown", keyWrite);
