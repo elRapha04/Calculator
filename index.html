@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v2 Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="calculator">
+        <input type="text" id="display" readonlvy>
+        <div id="keys">
+            <div id="nums">
+                <button data-key="" id="CLEAR">CLEAR</button>
+                <button data-key="49" class="num-btn write">1</button>
+                <button data-key="50" class="num-btn write">2</button>
+                <button data-key="51" class="num-btn write">3</button>
+                <button data-key="52" class="num-btn write">4</button>
+                <button data-key="53" class="num-btn write">5</button>
+                <button data-key="54" class="num-btn write">6</button>
+                <button data-key="55" class="num-btn write">7</button>
+                <button data-key="56" class="num-btn write">8</button>
+                <button data-key="57" class="num-btn write">9</button>
+                <button data-key="48" class="num-btn write" id="ZERO">0</button>
+            </div>
+            <div id="ops">
+                <button data-key="187" class="op-btn write">+</button>
+                <button data-key="189" class="op-btn write">-</button>
+                <button data-key="" class="op-btn write">*</button>
+                <button data-key="" class="op-btn write">/</button>
+                <button data-key="" class="op-btn" id="SOLVE">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

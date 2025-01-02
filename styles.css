@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+#calculator {
+    border: 2px solid;
+    border-radius: 10px;
+    height: 70vh;
+    width: 60vw;
+    padding: 20px;
+    margin: auto;
+}
+
+#display {
+    background-color: lime;
+    padding: 8px;
+    font-size: 3.5em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    height: 30%;
+    width: 100%;
+}
+
+#keys {
+    display: flex;
+    height: 70%;
+    width: 100%;
+    column-gap: 20px;
+}
+
+#nums {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    width: 70%;
+}
+
+#ops {
+    width: 30%;
+    display: grid;
+}
+
+#CLEAR {
+    grid-column: 1 / 4;
+    width: 100%;
+    background-color: hsl(34, 100%, 62%);
+}
+
+#ZERO {
+    grid-column: 2;
+}
+
+button {
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 25%;
+    border: 1px solid;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    transform: scale(1.15);
+    transition: 0.2s;
+}
+
+button:active {
+    transform: scale(1.05);
+    transition: 0.08s;
+    /* filter: brightness(0.5); Darken to 80% brightness */
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+}
+
+#nums, #ops {
+    gap: 10px;
+}
+.op-btn{
+    background-color: hsl(0, 0%, 56%);
+}
