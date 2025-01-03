@@ -20,9 +20,10 @@ clear.onclick = function(){
     display.value = "";
 };
 
-// backspace.onclick = function(){
+backspace.onclick = function(){
+    //TODO: Add a backspace functionality
+};
 
-// };
 
 let dark = true;
 
@@ -37,30 +38,33 @@ function toggleMode(){
     }
 }
 
-window.addEventListener("keydown", function(e){
+window.addEventListener("keydown", function(e) {
     const validBtn = document.querySelector(`button[key="${e.key}"]`);
-    // console.log(e.key);
     if (!validBtn) return;
+
+    // Handle different key actions
     switch (e.key) {
-        case ("Delete"):
+        case "Delete":
             display.value = "";
             break;
-        case ("Backspace"):
-            
+        case "Backspace":
+            // TODO: Add a backspace functionality
             break;
-        case ("Enter"):
+        case "Enter":
             display.value = eval(display.value);
             break;
         default:
             display.value += e.key;
             break;
     }
-    validBtn.classList.add("active");
-});
 
-function removeTransition(e){
-    if (e.propertyName !== "transform") return;
-    validBtn.classList.remove("active");
-}
-const buttons = document.querySelectorAll("button");
-buttons.forEach(validBtn => validBtn.addEventListener("transitionend", removeTransition))
+    // Add the active class to trigger animation
+    validBtn.classList.add("active");
+
+    // Now we need to listen for the transition end event for this button
+    validBtn.addEventListener("transitionend", function removeTransition(e) {
+        if (e.propertyName !== "transform") return;
+        validBtn.classList.remove("active");
+        validBtn.removeEventListener("transitionend", removeTransition); // Remove the event listener once it has fired
+    });
+});
