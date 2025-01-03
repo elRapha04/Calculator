@@ -91,6 +91,12 @@ button:active {
     color: white;
 }
 
+.active{
+    transform: scale(1.1);
+    border: 5px solid purple;
+    box-shadow: 0 0 1rem rebeccapurple;
+}
+
 #nums, #ops {
     gap: 10px;
 }
