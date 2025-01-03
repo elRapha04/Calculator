@@ -18,3 +18,18 @@ solve.onclick = function(){
 clear.onclick = function(){
     display.value = "";
 };
+
+let dark = true;
+
+function toggleMode(){
+    if (dark){
+        document.body.style.backgroundColor = "white";
+        dark = false;
+    }
+    else{
+        document.body.style.backgroundColor = "tomato";
+        dark = true;
+    }
+}
+
+const wkwk = false;
