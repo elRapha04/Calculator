@@ -22,10 +22,10 @@ body {
     background-color: var(--bgBase);
     border: 2px solid;
     border-radius: 10px;
-    height: 70vh;
+    height: fit-content;
     width: 60vw;
     padding: var(--padding);
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
     margin: auto;
 }
 
