@@ -29,11 +29,11 @@ let dark = true;
 
 function toggleMode(){
     if (dark){
-        document.body.style.backgroundColor = "tomato";
+        document.body.style.background = "linear-gradient(45deg,rgb(22, 22, 22),rgb(110, 11, 146))";
         dark = false;
     }
     else{
-        document.body.style.backgroundColor = "white";
+        document.body.style.background = "linear-gradient(-45deg,rgb(25, 162, 180),rgb(225, 135, 32))";
         dark = true;
     }
 }
