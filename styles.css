@@ -1,3 +1,8 @@
+:root {
+    --bgBase: white;
+    --displayBase: lime;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,6 +18,7 @@ body {
 }
 
 #calculator {
+    background-color: var(--bgBase);
     border: 2px solid;
     border-radius: 10px;
     height: 70vh;
@@ -23,7 +29,7 @@ body {
 }
 
 #display {
-    background-color: lime;
+    background-color: var(--displayBase);
     padding: 8px;
     font-size: 3.5em;
     font-weight: bold;
