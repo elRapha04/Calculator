@@ -1,6 +1,7 @@
 :root {
     --bgBase: white;
     --displayBase: lime;
+    --padding: 10px;
 }
 
 * {
@@ -23,7 +24,7 @@ body {
     border-radius: 10px;
     height: 70vh;
     width: 60vw;
-    padding: 20px;
+    padding: var(--padding);
     padding-bottom: 40px;
     margin: auto;
 }

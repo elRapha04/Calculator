@@ -68,3 +68,13 @@ window.addEventListener("keydown", function(e) {
         validBtn.removeEventListener("transitionend", removeTransition); // Remove the event listener once it has fired
     });
 });
+
+//for modifiers
+const inputs = this.document.querySelectorAll("#modifiers input");
+
+function update(){
+    document.documentElement.style.setProperty = (`--${this.name}`, this.value);
+}
+
+inputs.forEach(input => input.addEventListener("change", update));
+inputs.forEach(input => input.addEventListener("mousemove", update));
