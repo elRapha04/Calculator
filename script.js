@@ -25,16 +25,16 @@ backspace.onclick = function(){
 };
 
 
-let dark = true;
+let light = true;
 
 function toggleMode(){
-    if (dark){
+    if (light){
         document.body.style.background = "linear-gradient(45deg,rgb(22, 22, 22),rgb(110, 11, 146))";
-        dark = false;
+        light = false;
     }
     else{
         document.body.style.background = "linear-gradient(-45deg,rgb(25, 162, 180),rgb(225, 135, 32))";
-        dark = true;
+        light = true;
     }
 }
 
