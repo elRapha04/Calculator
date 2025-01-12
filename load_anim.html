@@ -38,6 +38,10 @@
         transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg)
       }
     }
+    #toggleBtn{
+      position: absolute;
+
+    }
   </style>
 </head>
 <body>
@@ -50,14 +54,25 @@
     let state = true;
     
     function toggle(){
+      
+      // IF-ELSE
+      /*
       if (state){
         anim.style.animationPlayState = "running";
+        toggleBtn.innerHTML = "Pause";
         state = false;
       }
       else{
         anim.style.animationPlayState = "paused";
-        state = true;
+      toggleBtn.innerHTML = "Play";
+      state = true;
       }
+      */
+
+      //TERNARY OPERATOR
+      anim.style.animationPlayState = (state) ? "running" : "paused";
+      toggleBtn.innerHTML = (state) ? "Pause" : "Play";
+      state = (state) ? false : true;
     }
     toggleBtn.addEventListener("click", toggle());
   </script>
