@@ -70,12 +70,10 @@ window.addEventListener("keydown", function(e) {
 });
 
 //for modifiers
-const inputs = document.querySelectorAll("#modifiers input");
-
+const inputs = this.document.querySelectorAll("#modifiers input");
 
 function update(){
-    const suffix = this.dataset.size || "";
-    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    document.documentElement.style.setProperty = (`--${this.name}`, this.value);
 }
 
 inputs.forEach(input => input.addEventListener("change", update));
