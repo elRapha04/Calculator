@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation</title>
+  <style>
+    body{
+      background-color: #1e1e1e;
+    }
+    .loading{
+      border: 10px solid lime;
+      height: 100px;
+      width: 100px;
+      border-radius: 10%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      box-shadow: 0 0 10px lime, 0 0 10px lime inset;
+      animation-duration: 2s;
+      animation-name: load;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+    @keyframes load {
+      0%{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+      }
+      33%{
+        transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg)
+      }
+      66%{
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(0deg)
+      }
+      100%{
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg)
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading"></div>
+</body>
+</html>
