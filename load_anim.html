@@ -22,6 +22,7 @@
       animation-name: load;
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
+      animation-play-state: running;
     }
     @keyframes load {
       0%{
@@ -41,5 +42,24 @@
 </head>
 <body>
   <div class="loading"></div>
+  <button id="toggleBtn" onclick="toggle()">Toggle</button>
+
+  <script>
+    const toggleBtn = document.querySelector("#toggleBtn");
+    const anim = document.querySelector(".loading");
+    let state = true;
+    
+    function toggle(){
+      if (state){
+        anim.style.animationPlayState = "running";
+        state = false;
+      }
+      else{
+        anim.style.animationPlayState = "paused";
+        state = true;
+      }
+    }
+    toggleBtn.addEventListener("click", toggle());
+  </script>
 </body>
 </html>
