@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning and Sizing</title>
+  <style>
+    /* General styles for visibility */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      border: 2px solid #333;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      border: 2px solid #007BFF;
+      padding: 10px;
+      background-color: #D9EFFF;
+    }
+
+    /* Positioning Examples */
+    #positioning-container {
+      position: relative;
+      /* This sets the context for absolutely positioned child elements */
+      height: 300px;
+    }
+
+    #child-static {
+      position: static;
+      /* Default positioning, stays in normal document flow */
+    }
+
+    #child-relative {
+      position: relative;
+      /* Moves relative to its normal position */
+      top: 10px;
+      left: 10px;
+    }
+
+    #child-absolute {
+      position: absolute;
+      /* Positioned relative to the nearest positioned ancestor (container) */
+      top: 50px;
+      left: 50px;
+    }
+
+    #child-fixed {
+      position: fixed;
+      /* Positioned relative to the viewport */
+      top: 10px;
+      right: 10px;
+      background-color: #FFC0CB;
+    }
+
+    /* Sizing Units Examples */
+    #sizing-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .size-pixel {
+      width: 100px;
+      /* Fixed width in pixels */
+      height: 100px;
+    }
+
+    .size-percent {
+      width: 50%;
+      /* Width is 50% of its container */
+      height: 100px;
+    }
+
+    .size-em {
+      width: 10em;
+      /* Relative to the font size (1em = 16px by default) */
+      height: 10em;
+    }
+
+    .size-vh-vw {
+      width: 50vw;
+      /* 50% of the viewport width */
+      height: 20vh;
+      /* 20% of the viewport height */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Positioning and Sizing Exploration</h1>
+
+  <div class="container" id="positioning-container">
+    <h2>Positioning Examples</h2>
+    <div class="box" id="child-static">Static Position</div>
+    <div class="box" id="child-relative">Relative Position</div>
+    <div class="box" id="child-absolute">Absolute Position</div>
+    <div class="box" id="child-fixed">Fixed Position</div>
+  </div>
+
+  <div class="container" id="sizing-container">
+    <h2>Sizing Units Examples</h2>
+    <div class="box size-pixel">100px x 100px</div>
+    <div class="box size-percent">50% Width</div>
+    <div class="box size-em">10em x 10em</div>
+    <div class="box size-vh-vw">50vw x 20vh</div>
+  </div>
+</body>
+
+</html>
