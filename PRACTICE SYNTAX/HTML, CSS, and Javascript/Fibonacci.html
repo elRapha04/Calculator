@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci</title>
+</head>
+
+<body>
+  <h1>Fibonacci Sequence</h1>
+  <label for="input">Which nth element of the sequence?</label>
+  <input type="number" id="input">
+  <button type="button" id="submitBtn" onclick="display()">Submit</button>
+  <h3 id="response"></h3>
+
+  <script>
+    const input = document.querySelector("#input");
+    const response = document.querySelector("#response");
+
+    function display() {
+      const n = Number(input.value);
+      //response.innerHTML = `${(n)}`;
+      response.innerHTML = `${fib(n)}`;
+    }
+
+    function fib(n) {
+      if (n >= 3) {
+        return fib(n - 1) + fib(n - 2)
+      }
+      else {
+        return 1;
+      }
+    }
+
+  </script>
+</body>
+
+</html>
