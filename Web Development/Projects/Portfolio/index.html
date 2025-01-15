@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <button id="modeBtn" onclick="toggleMode()">light/dark</button>
+                <li><a href="#projectPage">Projects</a></li>
+                <li><a href="#aboutPage">About Me</a></li>
+                <li><a href="">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section section1" id="landingPage">
+            <div id="title">
+                <div id="intro">Hello! I am</div>
+                <div id="name">Raphael</div>
+                <div id="tagline">Lorem, ipsum dolor.</div>
+            </div>
+            <button id="contact-btn">Contact Me</button>
+            <div id="links">
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section section2" id="projectPage">
+            <div id="projects">
+                <div class="project-container project1">
+                    <a href="">
+                        <img src="https://images.unsplash.com/photo-1735116356965-ad5b323d1af8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
+                            alt="alt-text" class="thumbnail">
+                        <span class="project-name">Project 1</span>
+                        <span class="tech">HTML | CSS | Javascript</span>
+                    </a>
+                </div>
+
+                <div class="project-container project2">
+                    <a href="">
+                        <img src="https://images.unsplash.com/photo-1735116356965-ad5b323d1af8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
+                            alt="alt-text" class="thumbnail">
+                        <span class="project-name">Project 2</span>
+                        <span class="tech">HTML | CSS | Javascript</span>
+                    </a>
+                </div>
+
+                <div class="project-container project3">
+                    <a href="">
+                        <img src="https://images.unsplash.com/photo-1735116356965-ad5b323d1af8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
+                            alt="alt-text" class="thumbnail">
+                        <span class="project-name">Project 3</span>
+                        <span class="tech">HTML | CSS | Javascript</span>
+                    </a>
+                </div>
+
+                <div class="project-container project4">
+                    <a href="">
+                        <img src="https://images.unsplash.com/photo-1735116356965-ad5b323d1af8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
+                            alt="alt-text" class="thumbnail">
+                        <span class="project-name">Project 4</span>
+                        <span class="tech">HTML | CSS | Javascript</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section3" id="aboutPage">
+            <div id="about-container">
+                <img src="https://plus.unsplash.com/premium_vector-1736343998437-2fc81572d7a4?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8MTZ8fHxlbnwwfHx8fHw%3D"
+                    alt="" id="my-img">
+                <div id="my-text">
+                    <h1 id="my-name">My Name</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat minus fuga reiciendis nam neque officiis laborum sit, nostrum quo fugit ratione quasi dolores modi distinctio tempore voluptates quaerat velit inventore a veritatis temporibus quod. Dolore explicabo officiis adipisci quae ullam dolor autem animi libero minus temporibus aut, necessitatibus voluptas! Repellendus?</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

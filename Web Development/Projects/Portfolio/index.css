@@ -1,0 +1,223 @@
+:root{
+    --adjust: 10dvh;
+}
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(45deg, #FFAFCC, #BDE0FE);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    height: var(--adjust);
+    width: 100%;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px  black;
+    position: fixed;
+    z-index: 1;
+    align-content: center;
+}
+
+nav {
+    font-family: 'Poppins';
+    width: 40%;
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li a {
+    font-size: 24px;
+    text-decoration: none;
+    color: inherit;
+}
+
+#modeBtn {
+}
+.dark {
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section{
+    border: 5px dotted green;
+    position: relative;
+    top: var(--adjust);
+    height: calc(100dvh - var(--adjust));
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5dvh;
+}
+
+#title {
+}
+
+#intro {
+    font-family: 'Poppins';
+    font-size: 40px;
+}
+
+#name {
+    font-family: 'Bungee Shade';
+    font-size: 128px;
+}
+
+#tagline {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-size: 40px;
+    text-align: right;
+}
+
+#contact-btn {
+    cursor: pointer;
+    border: 5px solid;
+    border-radius: 25px;
+    font-family: 'Work Sans';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 40px;
+    padding: 15px 30px;
+    background: linear-gradient(-45deg, #FFAFCC, #BDE0FE);
+
+    margin-top: 5dvh;
+    transition: 0.25s ease;
+
+}
+#contact-btn:hover {
+    transform: scale(1.1);
+}
+
+#links {
+    position: absolute;
+    bottom: 2dvh;
+    width: 50dvw;
+}
+
+#links ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#links i{
+    transition: 0.25s ease;
+}
+#links i:hover{
+    transform: scale(0.85);
+}
+
+.fa-brands {
+    color: black;
+    font-size: 76px;
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+#projectPage {
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5%;
+
+    height: 80dvh;
+    width: 50dvw;
+}
+
+.project-container {
+    transform: scale(1.0);
+    transition: ease 0.5s;
+}
+.project-container:hover {
+    transform: scale(1.1);
+    transition: ease 0.5s;
+}
+
+.project-container > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 5%;
+    text-decoration: none;
+    color: black;
+}
+
+.thumbnail {
+    align-self: center;
+    height: auto;
+    width: 100%;
+}
+
+.project-name {
+    font-family: 'Work Sans';
+    font-weight: bold;
+}
+
+.tech {
+    font-family: 'Poppins';
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+
+#aboutPage{
+
+}
+
+#about-container{
+    border: 5px dotted green;
+    height: 80dvh;
+    width: 80dvw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+#my-img{
+    border: 5px dotted blue;
+    max-width: 200px;
+    aspect-ratio: 3 / 4;
+    object-fit: fill;
+}
+
+#my-text{
+
+}
+
+#my-name{
+    font-size: 5rem;
+}
+
+#my-text p{
+    font-size: 2rem;
+}
