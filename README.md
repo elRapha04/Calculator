@@ -1,5 +1,5 @@
 ## Recommended Structure (by ChatGPT)
-
+```
 programming-practice/
 ├── DataStructuresAlgorithms/
 │   ├── Python/
@@ -73,3 +73,4 @@ programming-practice/
 │   ├── EthicalHacking/               # Ethical hacking tools and techniques
 │   │   ├── KaliLinux/
 │   ├── Projects/                     # Cybersecurity projects (e.g., vulnerability scanners)
+```
