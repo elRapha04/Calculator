@@ -1,4 +1,4 @@
-## Recommended Structure (by ChatGPT)
+## Recommended Structure (a sample by ChatGPT)
 ```
 programming-practice/
 ├── DataStructuresAlgorithms/
