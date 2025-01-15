@@ -32,7 +32,7 @@ programming-practice/
 
 ├── GameDevelopment/
 │   ├── Unity/
-│   │   ├── C#/                      # C#-specific Unity work
+│   │   ├── C#/                       # C#-specific Unity work
 │   │   │   ├── Basics/               # Unity basics (e.g., physics, game loops)
 │   │   │   ├── Projects/             # Unity projects (e.g., simple games)
 │   ├── Pygame/
