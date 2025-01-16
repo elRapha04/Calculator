@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
 
@@ -27,13 +28,21 @@ public class Main {
         System.out.println("Hello " + name);
         System.out.println("You are " + age + " years old");
 
-//        OTHER SCANNER METHODS:
-//            nextLine() //reads the entire line including spaces
-//            nextInt() //reads the next IMMEDIATE integer
-//            nextDouble() //reads the next IMMEDIATE double
-//            nextBoolean() //reads the next IMMEDIATE boolean
+//      OTHER SCANNER METHODS:
+//        nextLine() //reads the entire line including spaces
+//        nextInt() //reads the next IMMEDIATE integer
+//        nextDouble() //reads the next IMMEDIATE double
+//        nextBoolean() //reads the next IMMEDIATE boolean
 
         scanner.close();
+*/
+
+/*
+        //GENERATE RANDOM NUMBERS (requires line 2)
+        Random random = new Random(); //similar methods with Scanner
+        int number = random.nextInt(1, 6); //1 inclusive, 6 exclusive
+
+        System.out.println(number);
 */
 
         
