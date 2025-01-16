@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>String Reverser</title>
 </head>
+
 <body>
   <h1>String Reverser</h1>
   <label for="input">Input a text: </label>
@@ -16,16 +18,17 @@
     const input = document.querySelector("#input");
     const response = document.querySelector("#response");
 
-    function reverse(text){
+    function reverse(text) {
       const textArr = text.split('');
       const reversed = textArr.reverse().join('');
       return reversed;
     }
 
-    function display(){
+    function display() {
       const text = input.value;
       response.innerHTML = `Reversed String: ${reverse(text)}`;
     }
   </script>
 </body>
+
 </html>
