@@ -12,11 +12,11 @@
   <label for="input">Input a number:</label>
   <input type="number" id="input">
   <button id="submitBtn" onclick="display()">Submit</button>
-  <h3 id="result"></h3>
+  <h3 id="response"></h3>
 
   <script>
     const input = document.querySelector("#input");
-    const result = document.querySelector("#result");
+    const response = document.querySelector("#response");
     // const submitBtn = document.querySelector("#submitBtn");
 
     // function factorial(num) {
@@ -49,11 +49,11 @@
     function display() {
       const num = Number(input.value);
       if (input.value === "") {
-        result.innerHTML = "Please HAVE AN INPUT!";
+        response.innerHTML = "Please HAVE AN INPUT!";
       } else if (num < 0) {
-        result.innerHTML = "Please enter a POSITIVE number!";
+        response.innerHTML = "Please enter a POSITIVE number!";
       } else {
-        result.innerHTML = `The factorial of ${num} is ${factorial(num)}`;
+        response.innerHTML = `The factorial of ${num} is ${factorial(num)}`;
       }
     }
   </script>
