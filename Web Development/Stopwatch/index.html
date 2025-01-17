@@ -27,11 +27,13 @@
       border-radius: 50px;
       padding: 25px;
       margin: auto;
+      box-shadow: 5px 5px 8px black;
     }
 
     #display{
       text-align: center;
-      font-size: 6em;
+      font-size: 6.5em;
+      text-shadow: 5px 5px 8px black;
     }
 
     #controls{
@@ -47,11 +49,14 @@
       font-weight: bold;
       padding: 25px;
       cursor: pointer;
+      transition: transform 0.1s ease;
     }
 
     button:hover{
       transform: scale(1.05);
-      transition: 0.1s;
+    }
+    button:active{
+      transform: scale(1);
     }
   </style>
 </head>
@@ -60,20 +65,20 @@
   <h1>Stopwatch</h1>
 
   <div id="container">
-    <div id="display">
-      00:00:00
+    <div id="display" style="font-family: monospace;">
+      00:00:00:00
     </div>
 
     <div id="controls">
-      <Button style="background-color:green;">Start</Button>
-      <Button style="background-color: red;">Stop</Button>
-      <Button style="background-color: blue;">Reset</Button>
+      <Button style="background-color:green;" onclick="start()">Start</Button>
+      <Button style="background-color: red;" onclick="stop()">Stop</Button>
+      <Button style="background-color: blue;" onclick="reset()">Reset</Button>
     </div>
 
   </div> 
 
   <script>
-    
+
   </script>
 </body>
 
