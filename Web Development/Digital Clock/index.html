@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigiClock</title>
+  <style>
+    body{
+      margin: 0;
+      background-image: url("https://wallpapercave.com/wp/wp8977295.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    #clock-container{
+      height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+    }
+    
+    #clock{
+      text-align: center;
+      font-size: 6em;
+      backdrop-filter: blur(5px);
+      width: 100%;
+      background-color: hsla(0, 0%, 100%, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div id="clock-container">
+    <div id="clock">000000</div>
+  </div>
+  <script>
+
+    const clock = document.querySelector("#clock");
+
+    function setTime(){
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, 0);
+      const minutes = now.getMinutes().toString().padStart(2, 0);
+      const seconds = now.getSeconds().toString().padStart(2, 0);
+
+      clock.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(setTime, 1000)
+  </script>
+</body>
+</html>
