@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Array Cardio 💪💪</title>
   <link rel="icon" href="https://fav.farm/🔥" />
 </head>
+
 <body>
   <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
   <script>
@@ -40,14 +42,28 @@
     const findID = comments.find(comment => comment.id  === 823423);
     console.log(findID);
     
-    
+    */
+
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
-    const findIdx = comments.findIndex(comment => comment.id  === 823423);
-    console.log(findIdx);
-    */
-    
+    const index = comments.findIndex(comment => comment.id === 823423);
+    console.log(index);
+
+    //comments.splice(id=index);
+
+    const newComments = [
+      ...comments.slice(0, index),
+      ...comments.slice(index + 1)
+    ]
+
+    console.table(comments);
+    console.table(newComments);
+
+
+
+
   </script>
 </body>
+
 </html>
