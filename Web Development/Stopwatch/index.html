@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stopwatch</title>
   <style>
-    body{
+    body {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -15,12 +15,12 @@
       background-color: rgb(53, 65, 65);
     }
 
-    h1{
+    h1 {
       font-size: 6em;
       text-align: center;
     }
 
-    #container{
+    #container {
       height: fit-content;
       width: 80dvw;
       border: 5px solid;
@@ -30,18 +30,18 @@
       box-shadow: 5px 5px 8px black;
     }
 
-    #display{
+    #display {
       text-align: center;
       font-size: 6.5em;
       text-shadow: 5px 5px 8px black;
     }
 
-    #controls{
+    #controls {
       display: flex;
       justify-content: space-evenly;
     }
 
-    button{
+    button {
       border: 3px solid;
       border-radius: 20px;
       font-size: 1.5em;
@@ -52,10 +52,11 @@
       transition: transform 0.1s ease;
     }
 
-    button:hover{
+    button:hover {
       transform: scale(1.05);
     }
-    button:active{
+
+    button:active {
       transform: scale(1);
     }
   </style>
@@ -75,9 +76,34 @@
       <Button style="background-color: blue;" onclick="reset()">Reset</Button>
     </div>
 
-  </div> 
+  </div>
 
   <script>
+    const display = document.querySelector("#display");
+
+    let isRunning = false;
+
+    function start() {
+      if (!isRunning) {
+
+        isRunning = true;
+      }
+    }
+
+    function stop() {
+      if (isRunning) {
+
+        isRunning = false;
+      }
+    }
+
+    function reset() {
+
+    }
+
+    function update() {
+
+    }
 
   </script>
 </body>
