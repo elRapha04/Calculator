@@ -341,3 +341,15 @@ function print(event){
 window.addEventListener("scroll", print);
 */
 
+//CALLBACKS
+function hello(callback){
+    console.log("Hello");
+    callback();
+}
+
+function bye(){
+    console.log("Bye");
+}
+
+hello(bye);
+
