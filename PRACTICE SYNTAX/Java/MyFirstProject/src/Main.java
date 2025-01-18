@@ -75,9 +75,5 @@ public class Main {
         System.out.printf("The area is %.1fcm²\n", area);
         System.out.printf("The volume is %.1fcm³\n", volume);
 */
-
-        System.out.println(4 / 3);
-        System.out.println(4 / 3.0);
-
     }
 }
