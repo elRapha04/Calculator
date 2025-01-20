@@ -10,8 +10,8 @@ function App() {
         </h1>
 
         {/* inDIVs inherit grid-container's height */}
-        <div id="grid-container" className="size-1/5 border-2 border-red-600 space-y-2">
-          <div id="group-div" className="border-2 border-yellow-300 flex size-full">
+        <div id="grid-container" className="size-4/5 border-2 border-red-600 rounded-md flex flex-col space-y-2">
+          <div id="group-div" className="border-2 border-yellow-300 flex h-full">
             <div id="inDiv" className="w-full border-2 border-green-500 flex justify-center items-center">
               Row 1
             </div>
