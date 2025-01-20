@@ -2,7 +2,10 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center bg-gradient-to-bl from-yellow-400 via-pink to-purple-500">
+    <div
+      id="full-window"
+      className="w-full h-screen flex flex-col justify-center items-center bg-gradient-to-bl from-yellow-400 via-pink to-purple-500"
+    >
       <h1 className="font-sans font-medium italic text-2xl sm:text-3xl md:text-4xl lg:text-6xl">
         Beginner Programming Activity: Build a Creative Grid with React and
         Tailwind CSS!
