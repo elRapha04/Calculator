@@ -10,7 +10,7 @@ public class math {
         //Hypotenuse: c² = Math.sqrt(a² + b²)
             double a, b, c;
 
-            System.out.print("Enter value of a: ");
+            System.out.print("LENGTH OF THE HYPOTENUSE\nEnter value of a: ");
             a = scanner.nextDouble();
             System.out.print("Enter value of b: ");
             b = scanner.nextDouble();
@@ -21,7 +21,7 @@ public class math {
         //Get circumference, area, and volume of a circle/sphere
             double radius, circumference, area, volume;
 
-            System.out.print("Enter radius: ");
+            System.out.print("\nRADIUS, CIRCUMFERENCE, AND VOLUME OF A CIRCLE/SPHERE\nEnter radius: ");
             radius = scanner.nextDouble();
 
             circumference = 2 * Math.PI * radius; // 2πr
