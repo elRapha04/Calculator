@@ -342,6 +342,7 @@ window.addEventListener("scroll", print);
 */
 
 //CALLBACKS
+/*
 function hello(callback){
     console.log("Hello");
     callback();
@@ -352,4 +353,37 @@ function bye(){
 }
 
 hello(bye);
+*/
 
+//PROMISES PRACTICE===========================================================================
+
+function order() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Food ORDERED");
+      reject("Food NOT ORDERED");
+    }, 2000);
+  });
+}
+function prepare() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Food PREPARED");
+      reject("Food NOT PREPARED");
+    }, 1000);
+  });
+}
+function deliver() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Food DELIVERED");
+      reject("Food NOT DELIVERED");
+    }, 1500);
+  });
+}
+
+order().then((value) => {console.log(value); return prepare()})
+         .then((value) => {console.log(value); return deliver()})
+         .then((value) => {console.log(value); return "TRANSACTION SUCCESSFUL"})
+         .then((value) => console.log(value));
+    
