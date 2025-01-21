@@ -356,7 +356,7 @@ hello(bye);
 */
 
 //PROMISES PRACTICE===========================================================================
-
+/*
 function order() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -368,7 +368,7 @@ function order() {
 function prepare() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("Food PREPARED");
+      //resolve("Food PREPARED");
       reject("Food NOT PREPARED");
     }, 1000);
   });
@@ -384,10 +384,14 @@ function deliver() {
 
 async function handleOrder() {
 
-    
-    console.log(await order());
-    console.log(await prepare());
-    console.log(await deliver());
+    try {
+        console.log(await order());
+        console.log(await prepare());
+        console.log(await deliver());
+    } catch (error) {
+        console.error(error);
+        console.error("TRANSACTION UNSUCCESSFUL");
+    }
 
     
 }
@@ -400,3 +404,5 @@ order().then((value) => {console.log(value); return prepare()})
          .then((value) => {console.log(value); return "TRANSACTION SUCCESSFUL"})
          .then((value) => console.log(value));
 */
+//PROMISES PRACTICE (END)===========================================================================
+
