@@ -382,8 +382,21 @@ function deliver() {
   });
 }
 
+async function handleOrder() {
+
+    
+    console.log(await order());
+    console.log(await prepare());
+    console.log(await deliver());
+
+    
+}
+
+handleOrder();
+
+/*
 order().then((value) => {console.log(value); return prepare()})
          .then((value) => {console.log(value); return deliver()})
          .then((value) => {console.log(value); return "TRANSACTION SUCCESSFUL"})
          .then((value) => console.log(value));
-    
+*/
