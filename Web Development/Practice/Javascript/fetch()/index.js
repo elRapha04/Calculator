@@ -6,7 +6,7 @@
 //   const output = document.getElementById("output");
 // }
 
-fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+fetch("https://pokeapi.co/api/v2/pokemon/ditto")
   .then(response => {
     
     if(!response.ok){
@@ -16,5 +16,5 @@ fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
     return response.json();
 
   })
-  .then(data => console.log(data.id))
+  .then(data => console.log(data.forms[0].name))
   .catch(error => console.error(error))
