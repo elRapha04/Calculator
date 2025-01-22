@@ -1,3 +1,5 @@
+// import java.util.Scanner;
+// import java.util.Random;
 
 public class Main {
 
@@ -10,7 +12,6 @@ public class Main {
 
         System.out.println("Now this line was made from a shortcut");
 */
-
 /*
         //READING USER INPUT (requires line 1)
         Scanner scanner = new Scanner(System.in);
