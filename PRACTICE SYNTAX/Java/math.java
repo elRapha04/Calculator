@@ -32,5 +32,7 @@ public class math {
             System.out.printf("The area is %.1fcm²\n", area);
             System.out.printf("The volume is %.1fcm³\n", volume);
 
+            scanner.close();
+
     }
 }

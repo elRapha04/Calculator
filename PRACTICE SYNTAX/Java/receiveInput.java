@@ -18,5 +18,7 @@ public class receiveInput {
         System.out.print("\nPlease enter your age: ");
         int age = scanner.nextInt();
         System.out.printf("I see that you are %d years old!", age);
+
+        scanner.close();
     }
 }
