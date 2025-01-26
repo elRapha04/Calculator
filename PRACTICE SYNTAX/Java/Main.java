@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Now this line was made from a shortcut");
 */
 /*
-        //READING USER INPUT (requires line 1)
+        //READING USER INPUT (requires "import java.util.Scanner;")
         Scanner scanner = new Scanner(System.in);
 
         //get age (number)
@@ -35,7 +35,7 @@ public class Main {
 */
 
 /*
-        //GENERATE RANDOM NUMBERS (requires line 2)
+        //GENERATE RANDOM NUMBERS (requires "import java.util.Random;")
         Random random = new Random(); //similar methods with Scanner
         int number = random.nextInt(1, 6); //1 inclusive, 6 exclusive
 
