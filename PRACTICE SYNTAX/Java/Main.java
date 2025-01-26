@@ -1,5 +1,3 @@
-// import java.util.Scanner;
-// import java.util.Random;
 
 public class Main {
 
@@ -61,7 +59,7 @@ public class Main {
 
         //Get circumference, area, and volume of a circle/sphere
         double radius, circumference, area, volume;
-        Scanner scanner = new Scanner(System.in);
+        //Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter radius: ");
         radius = scanner.nextDouble();
