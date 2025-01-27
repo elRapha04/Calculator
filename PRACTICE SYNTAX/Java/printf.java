@@ -26,7 +26,6 @@ public class printf {
 
             PRECISION
                 .number => set decimal places
-         */
 
         System.out.printf("SPECIFIER CHARACTER:\n");
         System.out.printf("\tString: %s\n", "Hello");
@@ -35,21 +34,22 @@ public class printf {
         System.out.printf("\tBoolean: %b\n", false);
 
         System.out.printf("FLAGS:\n");
-        System.out.printf("\t%\n", 1);
-        System.out.printf("\t%\n", 23);
-        System.out.printf("\t%\n", 456);
-        System.out.printf("\t%\n", 7890);
+        System.out.printf("\t% d\n", 1);
+        System.out.printf("\t% d\n", -23);
+        System.out.printf("\t% d\n", 456);
+        System.out.printf("\t% ,d\n", -7890);
 
         System.out.printf("WIDTH:\n");
-        System.out.printf("\t%\n", 1);
-        System.out.printf("\t%\n", 23);
-        System.out.printf("\t%\n", 456);
-        System.out.printf("\t%\n", 7890);
+        System.out.printf("\t%05d\n", 1);
+        System.out.printf("\t%-5d\n", 23);
+        System.out.printf("\t%05d\n", 456);
+        System.out.printf("\t%-5d\n", 7890);
+        */
 
         System.out.printf("PRECISION:\n");
-        System.out.printf("\t%\n", 1);
-        System.out.printf("\t%\n", 23);
-        System.out.printf("\t%\n", 456);
-        System.out.printf("\t%\n", 7890);
+        System.out.printf("\t%.2d\n", 1);
+        System.out.printf("\t%.2d\n", 23);
+        System.out.printf("\t%.2d\n", 456);
+        System.out.printf("\t%.2d\n", 7890);
     }
 }
