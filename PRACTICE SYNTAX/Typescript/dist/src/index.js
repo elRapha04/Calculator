@@ -1,11 +1,16 @@
 "use strict";
-function getAge(age) {
-    if (age < 18) {
-        return "You're below 18 years old!";
+var Gender;
+(function (Gender) {
+    Gender["M"] = "Male";
+    Gender["F"] = "Female";
+})(Gender || (Gender = {}));
+let penguin = {
+    name: "Gunther",
+    age: 3,
+    gender: Gender.M,
+    speak: () => {
+        return "*penguin noises*";
     }
-    else {
-        return "You're beyond 18 years old!";
-    }
-}
-console.log(getAge(3));
+};
+console.log(`${penguin.name} is a ${penguin.gender} penguin. He is ${penguin.age} years old. ${penguin.speak()}`);
 //# sourceMappingURL=index.js.map
