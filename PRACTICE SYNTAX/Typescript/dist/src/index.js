@@ -1,16 +1,7 @@
 "use strict";
-var Gender;
-(function (Gender) {
-    Gender["M"] = "Male";
-    Gender["F"] = "Female";
-})(Gender || (Gender = {}));
-let penguin = {
-    name: "Gunther",
-    age: 3,
-    gender: Gender.M,
-    speak: () => {
-        return "*penguin noises*";
-    }
-};
-console.log(`${penguin.name} is a ${penguin.gender} penguin. He is ${penguin.age} years old. ${penguin.speak()}`);
+function getCustomer(id) {
+    return id !== 0 ? { date: new Date() } : null;
+}
+let customer1 = getCustomer(0);
+console.log(customer1 === null || customer1 === void 0 ? void 0 : customer1.date);
 //# sourceMappingURL=index.js.map

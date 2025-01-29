@@ -25,7 +25,6 @@ function getAge(age: number): string{
 console.log(getAge(3));
 */
 
-
 /*
 //OBJECT
 enum Gender {
@@ -75,4 +74,17 @@ let penguin: Penguin = {
 };
 
 console.log(`${penguin.name} is a ${penguin.gender} penguin. He is ${penguin.age} years old. ${penguin.speak()}`)
+*/
+/*
+//OPTIONAL [property/element/call] ACCESS OPERATOR "?."
+type Customer = {
+  date: Date
+}
+
+function getCustomer(id: number): Customer | null {
+  return id !== 0 ? {date: new Date()} : null;
+}
+
+let customer1 = getCustomer(0)
+console.log(customer1?.date);
 */
