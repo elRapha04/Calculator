@@ -25,10 +25,9 @@ function getAge(age: number): string{
 console.log(getAge(3));
 */
 
+
 /*
 //OBJECT
-*/
-
 enum Gender {
   M = "Male",
   F = "Female",
@@ -49,3 +48,31 @@ let penguin: {
 };
 
 console.log(`${penguin.name} is a ${penguin.gender} penguin. He is ${penguin.age} years old. ${penguin.speak()}`)
+*/
+
+/*
+//TYPE ALIASING
+enum Gender {
+  M = "Male",
+  F = "Female",
+}
+
+// use type keyword then PascalCase
+type Penguin = {
+  name: string,
+  age: number,
+  gender: Gender,
+  speak: () => string
+}
+
+let penguin: Penguin = {
+  name: "Gunther", 
+  age: 3, 
+  gender: Gender.M, 
+  speak: () => {
+    return "*penguin noises*"
+  }
+};
+
+console.log(`${penguin.name} is a ${penguin.gender} penguin. He is ${penguin.age} years old. ${penguin.speak()}`)
+*/
