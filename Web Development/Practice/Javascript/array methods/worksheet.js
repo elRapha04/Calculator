@@ -59,8 +59,21 @@ console.log(nameHt);
 
 //***REDUCE***
 //1. Get total mass of all characters
+const totalMass = characters.reduce((accumulator, current) => {
+    return accumulator + current.mass;
+}, 0);
+console.log(totalMass);
+
 //2. Get total height of all characters
 //3. Get total number of characters by eye color
+const eyes = characters.reduce((acc, cur) => {
+    if (cur.eye_color === 'blue'){
+        ++acc;
+    }
+    return acc;
+}, 0);
+console.log(eyes);
+
 //4. Get total number of characters in all the character names
 
 //***FILTER***
