@@ -73,10 +73,10 @@ function spin() {
   }
 
   const reels = [];
-  for (let i = 0; i < COLS; i++){
+  for (let i = 0; i < COLS; i++) {
     reels.push([]);
     const availSymbols = [...symbols];
-    for (let j = 0; j < ROWS; j++){
+    for (let j = 0; j < ROWS; j++) {
       const idx = Math.floor(Math.random() * availSymbols.length);
       reels[i].push(availSymbols[idx]);
       availSymbols.splice(idx, 1);
@@ -85,7 +85,20 @@ function spin() {
   return reels;
 }
 
+function transpose(reels) {
+  const rows = [];
+
+  for (let i = 0; i < ROWS; i++) {
+    rows.push([]);
+    for (let j = 0; j < ROWS; j++) {
+      rows[i][j] = reels[j][i];
+    }
+  }
+}
+
 // 5. Check if the player won
+
+
 
 // 6. Give the player's winnings
 // 7. Play again
@@ -94,6 +107,7 @@ function spin() {
 // const lines = numOfLines();
 // const bet = getBet(balance, lines);
 // const reels = spin();
+// const transposed = transpose();
 
 // console.log(balance);
 // console.log(lines);
