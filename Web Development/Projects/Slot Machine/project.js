@@ -82,19 +82,19 @@ function spin() {
       availSymbols.splice(idx, 1);
     }
   }
-
-  console.log(reels);
+  return reels;
 }
 
-spin();
-
 // 5. Check if the player won
+
 // 6. Give the player's winnings
 // 7. Play again
 
 // let balance = deposit();
 // const lines = numOfLines();
 // const bet = getBet(balance, lines);
+// const reels = spin();
+
 // console.log(balance);
 // console.log(lines);
 // console.log(bet);
