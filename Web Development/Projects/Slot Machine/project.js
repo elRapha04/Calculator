@@ -94,21 +94,59 @@ function transpose(reels) {
       rows[i][j] = reels[j][i];
     }
   }
+  return rows;
+}
+
+function printRows(rows){
+  for (const row of rows){
+    let rowString = "";
+    for (const [i, symbol] of row.entries()){
+      rowString += symbol;
+      if (i < rows.length - 1){
+        rowString += " | ";
+      }
+    }
+    console.log(rowString);
+  }
 }
 
 // 5. Check if the player won
 
+function getWinnings(rows, bet, lines){
+  let winnings = 0;
+  
+  for (let row = 0; row < lines; row++){
+    const symbols = rows[row];
+    let allSame = true;
 
+    for (const symbol of symbols){
+      if (symbol != symbols[0]){
+        allSame = false;
+        break;
+      }
+    }
+    
+    if (allSame){
+      winnings += bet * SYMBOL_VALUE[symbols[0]]; 
+    }
+  }
+  return winnings;
+}
 
 // 6. Give the player's winnings
 // 7. Play again
-
-// let balance = deposit();
-// const lines = numOfLines();
-// const bet = getBet(balance, lines);
-// const reels = spin();
-// const transposed = transpose();
-
-// console.log(balance);
-// console.log(lines);
-// console.log(bet);
+function game(){
+  let balance = deposit();
+  
+  while (true) {
+    const lines = numOfLines();
+    const bet = getBet(balance, lines);
+    const reels = spin();
+    const transposed = transpose(reels);
+    printRows(transposed);
+    const winnings = getWinnings(transposed, bet, lines);
+    console.log("WINNINGS: $" + winnings.toString());
+  }
+}
+  
+game();
