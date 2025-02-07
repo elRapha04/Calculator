@@ -15,12 +15,29 @@ function deposit() {
   }
 }
 
-const depAmt = deposit();
-console.log(depAmt);
 
-// 2.
-// 3.
-// 4.
-// 5.
-// 6.
-// 7.
+// 2. Determine number of lines to bet on
+
+function numOfLines(){
+  while (true){
+    const lines = prompt("How many lines to bet on : ");
+    const numLines = parseFloat(lines);
+
+    if(isNaN(numLines ) || numLines <= 0 || numLines > 3){
+      console.log("Invalid line count, try again.");
+    } else {
+      return numLines
+    }
+  }
+}
+
+// 3. Collect the bet amount
+// 4. Spin the slot machine
+// 5. Check if the player won
+// 6. Give the player's winnings
+// 7. Play again
+
+const depAmt = deposit();
+const lines = numOfLines();
+console.log(depAmt);
+console.log(lines);
