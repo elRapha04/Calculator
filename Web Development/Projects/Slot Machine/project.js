@@ -71,7 +71,19 @@ function spin() {
       symbols.push(symbol);
     }
   }
-  console.log(symbols);
+
+  const reels = [];
+  for (let i = 0; i < COLS; i++){
+    reels.push([]);
+    const availSymbols = [...symbols];
+    for (let j = 0; j < ROWS; j++){
+      const idx = Math.floor(Math.random() * availSymbols.length);
+      reels[i].push(availSymbols[idx]);
+      availSymbols.splice(idx, 1);
+    }
+  }
+
+  console.log(reels);
 }
 
 spin();
