@@ -32,12 +32,28 @@ function numOfLines(){
 }
 
 // 3. Collect the bet amount
+
+function getBet(balance, lines){
+  while (true){
+    const bet = prompt("Enter bet per line: ");
+    const numBet = parseFloat(bet);
+
+    if (isNaN(numBet) || numBet <= 0 || balance <= (numBet * lines)){
+      console.log("Invalid input, try again.");
+    } else {
+      return numBet;
+    }
+  }
+}
+
 // 4. Spin the slot machine
 // 5. Check if the player won
 // 6. Give the player's winnings
 // 7. Play again
 
-const depAmt = deposit();
+let balance = deposit();
 const lines = numOfLines();
-console.log(depAmt);
+const bet = getBet(balance, lines);
+console.log(balance);
 console.log(lines);
+console.log(bet);
