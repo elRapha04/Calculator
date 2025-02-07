@@ -36,7 +36,7 @@ function deposit() {
 
 function numOfLines() {
   while (true) {
-    const lines = prompt("How many lines to bet on : ");
+    const lines = prompt("How many lines to bet on: ");
     const numLines = parseFloat(lines);
 
     if (isNaN(numLines) || numLines <= 0 || numLines > 3) {
@@ -54,8 +54,8 @@ function getBet(balance, lines) {
     const bet = prompt("Enter bet per line: ");
     const numBet = parseFloat(bet);
 
-    if (isNaN(numBet) || numBet <= 0 || balance <= numBet * lines) {
-      console.log("Invalid input, try again.");
+    if (isNaN(numBet) || numBet <= 0 || balance < numBet * lines) {
+      console.log("Invalid bet, try again.");
     } else {
       return numBet;
     }
@@ -135,17 +135,26 @@ function getWinnings(rows, bet, lines){
 
 // 6. Give the player's winnings
 // 7. Play again
+
 function game(){
   let balance = deposit();
   
   while (true) {
+    console.log("BALANCE: ", balance);
     const lines = numOfLines();
     const bet = getBet(balance, lines);
+    balance -= bet * lines;
     const reels = spin();
     const transposed = transpose(reels);
     printRows(transposed);
     const winnings = getWinnings(transposed, bet, lines);
-    console.log("WINNINGS: $" + winnings.toString());
+    balance += winnings;
+    console.log("WINNINGS: $", winnings);
+
+    if (balance === 0){
+      console.log("You have no money left. BYE");
+      break;
+    }
   }
 }
   
