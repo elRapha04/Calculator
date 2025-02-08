@@ -1,8 +1,14 @@
-const http = require("http");
+import http from "http";
+import dotenv from "dotenv";
+dotenv.config();
 
-http
-  .createServer(function (req, res) {
-    res.writeHead(200, { "content-type": "text/html" });
-    res.end("Hello warudo!!!");
-  })
-  .listen(3679);
+const PORT = process.env.PORT;
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.end("Herro warudo");
+});
+
+server.listen(PORT, () => {
+  console.log(`Server running in port: ${PORT}`);
+});
