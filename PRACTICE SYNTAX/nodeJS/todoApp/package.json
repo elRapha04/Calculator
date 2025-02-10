@@ -1,0 +1,13 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "main": "todoApp.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch todoApp.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

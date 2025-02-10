@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "text": "this is a note",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "text": "this is another note",
+    "completed": false
+  }
+]
