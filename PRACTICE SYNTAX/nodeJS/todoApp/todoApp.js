@@ -29,7 +29,6 @@ for (const [key, value] in Object.entries(actions)){
 // SERVER
 const PORT = process.env.PORT;
 const server = createServer((req, res) => {
-  console.log("");
   
   fs.readFile("./todos.json", (err,  data) => {
     res.writeHead(200, {"content-type": "text/plain"});
@@ -43,6 +42,6 @@ const server = createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Todo app is running in port: ${PORT}`);
+  console.log(`Todo App is running in port: ${PORT}`);
 });
 
