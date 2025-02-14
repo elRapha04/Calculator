@@ -1,8 +1,7 @@
 const express = require("express");
 const app = express();
-require("dotenv").config({ path: "./.env" });
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 app.get('/', (req, res) => {
   res.send('<h1>Landing Page</h1>')
